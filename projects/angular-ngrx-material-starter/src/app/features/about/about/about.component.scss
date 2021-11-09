@@ -1,5 +1,4 @@
 @import '../../../../styles-variables';
-
 h1 {
   text-align: center;
   font-size: 3em;
@@ -11,36 +10,36 @@ h2 {
   text-transform: uppercase;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
 .background {
   padding: 80px 0 0 0;
   position: relative;
-
   .actions {
     text-align: center;
     margin: 50px;
     z-index: 1;
-
     span {
       display: inline-block;
       font-weight: bold;
       padding: 20px 10px 30px 10px;
     }
-
     a {
       margin: 0 5px 10px 0;
-
       &.actions-main {
         text-transform: uppercase;
         padding: 3px 24px;
       }
-
       fa-icon {
         position: relative;
         bottom: 1px;
       }
     }
   }
-
   .get-started {
     max-width: 700px;
     margin: 50px auto;
@@ -48,7 +47,6 @@ h2 {
     overflow-wrap: break-word;
     z-index: 1;
     overflow: hidden;
-
     code {
       font-size: 0.9em;
       display: inline-block;
@@ -57,7 +55,6 @@ h2 {
       margin: 0 0 10px 0;
     }
   }
-
   &::before {
     position: absolute;
     top: 0;
@@ -72,7 +69,6 @@ h2 {
     content: '';
     z-index: 0;
   }
-
   .gradient {
     &::before {
       position: absolute;
@@ -84,7 +80,6 @@ h2 {
       z-index: 0;
     }
   }
-
   .container {
     position: relative;
   }
@@ -93,15 +88,12 @@ h2 {
 .follow-releases {
   max-width: 700px;
   margin: 0 auto 60px auto;
-
   p {
     line-height: 40px;
-
     a {
       border-bottom: 3px solid;
     }
   }
-
   img {
     display: block;
     max-width: 80%;
@@ -115,31 +107,26 @@ h2 {
 .contributors {
   max-width: 700px;
   margin: 0 auto 60px auto;
-
   p {
     a {
       border-bottom: 3px solid;
     }
   }
-
   .contributors-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
     a {
       margin: 8px;
       width: 100px;
       display: inline-block;
       text-align: center;
-
       span {
         display: inline-block;
         padding: 10px 0 0 0;
         line-height: 16px;
       }
-
       img {
         border-radius: 50%;
         width: 100px;
@@ -162,40 +149,88 @@ h2 {
   }
   .follow-releases {
     width: auto;
-
     img {
       max-width: 100%;
     }
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
   }
 }
 
 @media (max-width: map-get($grid-breakpoints, sm)) {
   .background {
     padding: 40px 0 0 0;
-
     h1 {
       line-height: 1em;
     }
-
     .actions {
       margin: 40px 0 0 0;
-
       span {
         padding: 10px 0 20px 0;
       }
-
       a {
         width: 100%;
       }
     }
-
     .get-started {
       width: auto;
       margin: 40px auto 40px auto;
     }
   }
-
   .follow-releases {
     margin: 0 auto 40px auto;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
   }
 }

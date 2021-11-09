@@ -2,10 +2,9 @@
     <div class="gradient">
         <!-- <div class="container"> -->
         <h1>{{ 'anms.about.title' | translate }}</h1>
-        <div class="actions">
-            <br>
+        <div class="actions grid">
 
-            <ng-container *ngFor="let item of navigation">
+            <ng-container *ngFor="let item of navigation" class="">
                 <mat-card class="example-card">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header-image"></div>
@@ -31,7 +30,6 @@
                         </button>
                     </mat-card> -->
             </ng-container>
-            <br>
         </div>
     </div>
     <!-- </div> -->
