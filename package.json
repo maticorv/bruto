@@ -21,7 +21,8 @@
     "server": "node ./projects/server/server.js",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate && node .all-contributors-html.js",
-    "contributors:check": "all-contributors check"
+    "contributors:check": "all-contributors check",
+    "deploy": "ng build --configuration production --base-href=/angular-ci-cd/"
   },
   "husky": {
     "hooks": {
